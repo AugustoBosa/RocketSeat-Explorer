@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --bg-baseColor:white;
+
+    --btn-baseColor:#E1E1E6;
+    --btn-activeColor:#02799D;
+    --btn-activeColorHover:#03485e;
+
+    --btn-hoverColor:#acacb6;
+    --btn-imgHoverColor:#11111b;
+
+    --svg-fill:#323238;;
+    --svg-activeFill:white;
+
+    --txt-color:#323238;
+
+    --screenDiff480:calc(100vw - 480px);
+
+}
+
+.hidden{
+    display:none;
+}
+
+body{
+    min-width: 30rem;
+    height: 100vh;
+    width: 100vw;
+    padding:1rem;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+main{
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(1rem,6vw,3rem);
+
+}
+
+.timer-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:1rem;
+}
+#timer{
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timer-wrapper span{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(9rem,25vw,12.2rem);
+    line-height: clamp(10.9rem,30vw,14.8rem);
+    text-align: center;
+
+    color:var(--txt-color)
+
+}
+
+.controllers-wrapper{
+    width:100%;
+    padding:0 .5rem;
+    
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.soundboard-wrapper{
+    width:100%;
+    min-width: 25.5rem;
+    padding:0 .5rem;
+    gap:.5rem;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+button{
+    border:none;
+    background-color: transparent;
+}
+
+button:hover  svg path{
+    fill:var(--btn-imgHoverColor);
+}
+
+.sound-button{
+    background-color: var(--btn-baseColor);
+    border-radius: clamp(1.2rem,5vw,2.4rem);
+
+    width:clamp(5rem, 18vw,13.8rem);
+    height:clamp(5.5rem, 20vw,15.2rem);
+
+}
+.sound-button svg{
+    height:clamp(3.5rem,11vw,5.6rem);
+}
+.sound-button:hover{
+    background-color: var(--btn-hoverColor)
+}
+
+
+.activeBgSound {
+    background-color:var(--btn-activeColor) ;
+}
+.activeBgSound svg path{
+    fill:var(--svg-activeFill) ;
+}
+.activeBgSound:hover{
+    background-color:var(--btn-activeColorHover) ;
+}
+.activeBgSound:hover svg path{
+        fill:var(--svg-activeFill) ;
+}
+
+
+@media (min-width:480px){
+    body{
+        justify-content:start;
+    }
+    main{
+        flex-direction: row;
+        --mainGapFactor:calc(var(--screenDiff480)*0.2978);
+        gap:clamp(3rem,calc(3rem + var(--mainGapFactor)),19.2rem)
+    }
+    .soundboard-wrapper{
+        width: auto;
+        margin:0;
+        justify-content:start;
+        display:grid;
+        grid-template-columns: clamp(5rem, 18vw,13.8rem) clamp(5rem, 18vw,13.8rem);
+
+        --soundboardGapFactor:calc(var(--screenDiff480)*0.04963);
+        gap:clamp(.5rem,calc(.5rem + var(--soundboardGapFactor)),3.2rem);
+
+        padding:0;
+        
+
+
+    }
+    .timer-wrapper span{
+        
+        font-size: clamp(9rem,15vw,12.2rem);
+        line-height: clamp(10.9rem,30vw,14.8rem);
+        text-align: center;
+    
+        color:var(--txt-color)
+    
+    }
+
+}
+
+

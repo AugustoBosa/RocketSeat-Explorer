@@ -1,0 +1,75 @@
+body.DarkMode{
+    background-color:#000000 ;
+}
+.timer-wrapper.DarkMode span{
+    color: white;
+
+}
+.controllers-wrapper.DarkMode path {
+    fill:white;
+}
+
+
+.soundboard-wrapper.DarkMode button{
+background-color:#29292E ;
+}
+.soundboard-wrapper.DarkMode button:hover{
+    background-color:#434349 ;
+}   
+
+.soundboard-wrapper.DarkMode path{
+    fill: #C4C4CC;
+}
+.soundboard-wrapper.DarkMode button:hover path{
+    fill: #0A3442;
+}
+ 
+
+.soundboard-wrapper.DarkMode .volume-slider{
+    background: #C4C4CC;
+}
+.soundboard-wrapper.DarkMode button:hover .volume-slider{
+    background: #0b4a5c;
+}
+
+
+.soundboard-wrapper.DarkMode .volume-slider::-webkit-slider-thumb{
+    background: #C4C4CC;
+}
+
+.soundboard-wrapper.DarkMode button:hover .volume-slider::-webkit-slider-thumb{
+    background: #0A3442;
+}
+
+
+.soundboard-wrapper.DarkMode .activeBgSound{
+    background-color:#0A3442 ;
+}    
+
+.soundboard-wrapper.DarkMode .activeBgSound:hover{
+    background-color:#125970 ;
+}    
+
+.soundboard-wrapper.DarkMode .volume-slider::-webkit-slider-thumb{
+    background: #C4C4CC;
+}
+
+
+.soundboard-wrapper.DarkMode .activeBgSound .volume-slider{
+    background: white;
+}
+
+.soundboard-wrapper.DarkMode .activeBgSound .volume-slider::-webkit-slider-thumb{
+    background: white;
+}
+.soundboard-wrapper.DarkMode .activeBgSound path{
+    fill: white;
+
+}
+
+.DarkModeButton.DarkMode{
+    position: absolute;
+    right:6.4rem;
+    top:6.4rem;
+    cursor: pointer;
+}
