@@ -1,0 +1,468 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    font-size:62.5%;
+
+    --fs-h1:4rem;
+    --fs-p:1.3rem;
+
+    --fc-h1:#FFFFFF;
+    --fc-p: #23053A;
+    --fc-h2: #4A4E69;
+
+    --ff-h1:'Staatliches',sans-serif;
+    --ff-p:'Palanquin',sans-serif;
+    --ff-foot:"Open Sans", sans-serif;
+
+    --bg-color1:#8E9AAF;
+    --bg-color2:#EFF1FF;
+    --bg-color3:#CBC0D3;
+    --bg-color4:#FEEAFA;
+
+    --img-size:13.7rem;
+
+    --animation-intro:2.5s;
+    --animation-basedelay: 0.2s;
+    --animation-secdelay:2s;
+    
+    --card-translate:3rem;
+
+}
+
+body{
+    width:100vw;
+    min-width: 240px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 21rem;
+    width: 100%;
+    background-color: var(--bg-color2);
+}
+
+header{
+    min-width: 240px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+header::before{
+    content: "";
+    min-width: 240px;
+    width: 100%;
+    height:27.9rem;
+    background: var(--bg-color1);
+    position: absolute;
+    top: 0;left: 0;
+    z-index:-1;
+}
+header .banner{
+    display:flex;
+    height:5rem;
+    width:100%;
+
+    margin-bottom: 2.9rem;
+
+}
+header .banner h1{
+    text-transform:uppercase;
+    font-size:var(--fs-h1);
+    color: var(--fc-h1);
+    font-family: var(--ff-h1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    width:100%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-color3);
+
+    
+    
+
+    animation-name: logo-pop;
+    animation-duration:var(--animation-intro);
+    animation-delay:var(--animation-basedelay);
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+}
+header .imgs{
+    
+    position: relative;
+
+}
+header .imgs .baseLogo{
+    justify-content: center;
+    position: relative;
+    
+    height:var(--img-size);
+    width:auto;
+    margin:3.2rem auto;
+
+    transition: all 1s .3s ease-in-out;
+
+    animation-name: logo-pop;
+    animation-duration:var(--animation-intro);
+    animation-delay:var(--animation-basedelay);
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+}
+header .imgs .animate{
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+    left:-23px;
+    top:2px;
+
+    
+    height:var(--img-size);
+    width:auto;
+    margin:3.2rem auto;
+
+    transition: all 1s .3s ease-in-out;
+    
+    
+    opacity:0;
+    animation-name: logo-pop-fade;
+    animation-duration:var(--animation-intro);
+    animation-delay:var(--animation-basedelay);
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+}
+header .imgs .animate:hover{
+    
+    transform: scale(1.2);
+    opacity: 1;
+
+}
+header .imgs .animate:hover+.baseLogo{
+    transform: scale(1.1);
+    opacity:0;
+}
+header p{
+    font-family:var(--ff-p);
+    font-size:var(--fs-p);
+    color: var(--fc-p);
+    font-style: normal;
+    font-weight: 400;   
+    line-height: 1.5rem;
+    
+    width: 100%;
+    max-width: 73.5rem;
+
+    margin:1.4rem auto 6.3rem;
+    padding:0 3.2rem;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    animation-name: NS;
+    animation-duration:1s;
+    animation-delay:calc(var(--animation-secdelay));
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+}
+
+.main-wrapper{
+    display:flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction:column;
+
+    width:100%;
+    height:100%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 3.2rem 6rem;
+}
+main .card{
+    cursor:pointer;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+main .card img{
+    position: relative;
+    
+    border-radius:20px;
+    width: 100%;
+    height: auto;
+
+    box-shadow: .3rem .3rem .5rem 0 var(--bg-color1);
+
+    margin-bottom: 3.2rem;
+
+    transition:all 1s .3s ease-in-out;
+
+    animation-name: SW-NE;
+    animation-duration:1s;
+    animation-delay:var(--animation-secdelay);
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+
+}
+main .card img:hover{
+    transform: scale(1.05);
+    opacity: 0.8;
+    
+    box-shadow: 1rem 1rem 1.5rem .5rem var(--bg-color1);
+    
+}
+
+main .card h2{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+    position:absolute;
+    top:1.6rem;
+    right:1.6rem;
+
+    text-transform: uppercase;
+    font-family: var(--ff-h1);
+    font-style: normal;
+    font-weight: 400;
+    color:var(--fc-h2);
+
+    width: 11.2rem;
+    height: 3.5rem;
+
+    background: #FEEAFA;
+    border-radius: 2rem;
+
+    transition:all 1s .3s ease-in-out;
+
+    animation-name: NE-SW;
+    animation-duration:1s;
+    animation-delay:var(--animation-secdelay);
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+}
+main .card img:hover+h2{
+    transform: scale(1.2);
+    
+}
+
+footer{
+    display: none;
+    width:100%;
+    width:100%;
+
+    margin-bottom: 4.6rem;
+}
+footer p{
+    font-family: var(--ff-foot);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 28px;
+
+    color: var(--fc-h2);
+}
+footer p a{
+    text-decoration:none;
+    color: var(--fc-h2);
+    font-weight: bold;
+
+}
+
+
+
+
+@media(min-width:550px){
+    :root{
+        --fs-h1:clamp(4rem,6vw,4.8rem);
+        --fs-p:clamp(1.3rem,2vw,2rem);
+    }
+    main{
+        display:grid;
+        grid-template-areas:"A B"
+        "C B"
+        "C D";
+        
+        column-gap:32px;  
+    }
+    main div:nth-child(1){
+        grid-area:A;
+    }
+    main div:nth-child(2){
+        grid-area:B;
+    }
+    main div:nth-child(3){
+        grid-area:D;
+    }
+    main div:nth-child(4){
+        grid-area:C;
+    }
+    footer{
+        animation-name: NS;
+        animation-duration:1s;
+        animation-delay:var(--animation-secdelay);
+        animation-fill-mode: backwards;
+        animation-timing-function: ease;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+}
+
+@media(min-width:800px){
+    body{
+        display:flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: center;
+        height: 100vh;
+    }
+
+    header{
+        width:37.7rem;
+        height:100%;
+        background-color:var(--bg-color1);
+
+        justify-content: flex-end;
+    }
+    header::before{
+        display:none;
+    }
+    header .banner h1{
+        height:7rem;
+    }
+    
+    header p{
+        margin:3.2rem 5rem auto;
+        line-height: 2rem;
+        color:var(--fc-h1);
+        max-width:27rem;
+    }
+
+    main{
+        margin:6.4rem auto 0;   
+        padding-bottom:5rem;     
+    }
+    
+}
+
+
+
+
+
+
+
+@keyframes NE-SW{
+    0%{
+        opacity: 0;
+        transform: translate(var(--card-translate), calc(var(--card-translate)*-1));
+        
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+        
+    }
+
+}
+@keyframes SW-NE{
+    0%{
+        opacity: 0;
+        transform: translate(calc(var(--card-translate)*-1), var(--card-translate));
+        
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+        
+    }
+
+}
+@keyframes NS{
+    0%{
+        opacity:0;
+        color: rgba(0, 0, 0, 0);
+        transform: translateY(calc(var(--card-translate)*-1));
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    
+    }
+}
+
+@keyframes logo-pop{
+    0%{
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    40%{
+        opacity:0;
+        transform: scale(1.5)
+
+    }
+
+    70%{
+        opacity: 0;
+        transform: scale(1.5)
+    }
+
+    90%{
+        opacity:1;
+    }
+
+    100%{}
+}
+@keyframes logo-pop-fade{
+    0%{
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    40%{
+        opacity:1;
+        transform: scale(1.5)
+
+    }
+    70%{
+        opacity:1;
+        transform: scale(1.5)
+
+    }
+
+    100%{
+        
+    }
+}
+
+
+
+

@@ -1,0 +1,336 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    font-size:62.5%;
+
+    --fs-h1:4rem;
+    --fs-p:1.3rem;
+
+    --fc-h1:#FFFFFF;
+    --fc-p: #23053A;
+    --fc-h2: #4A4E69;
+
+    --ff-h1:'Staatliches',sans-serif;
+    --ff-p:'Palanquin',sans-serif;
+
+    --bg-color1:#8E9AAF;
+    --bg-color2:#EFF1FF;
+    --bg-color3:#CBC0D3;
+    --bg-color4:#FEEAFA;
+
+    --img-size:13.7rem;
+
+    --animation-intro:2.5s;
+    --animation-basedelay: 0.2s;
+    --animation-secdelay:2s;
+    
+    --card-translate:3rem;
+
+}
+
+
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 21rem;
+    width: 100%;
+    background-color: var(--bg-color2);
+}
+
+header{
+    height: 27.9rem;
+    background: var(--bg-color1);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+header h1{
+    text-transform:uppercase;
+    font-size:var(--fs-h1);
+    color: var(--fc-h1);
+    font-family: var(--ff-h1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    height:4.9rem;
+    width:100%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-color3);
+
+    margin-bottom: 2.9rem;
+
+    animation-name: logo-pop;
+    animation-duration:var(--animation-intro);
+    animation-delay:var(--animation-basedelay);
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+}
+header div{
+    
+    position: relative;
+
+}
+header div .baseLogo{
+    justify-content: center;
+    position: relative;
+    
+    height:var(--img-size);
+    width:auto;
+    margin:3.2rem auto;
+
+    transition: all 1s .3s ease-in-out;
+
+    animation-name: logo-pop;
+    animation-duration:var(--animation-intro);
+    animation-delay:var(--animation-basedelay);
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+}
+header div .animate{
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+    left:-23px;
+    top:2px;
+
+    
+    height:var(--img-size);
+    width:auto;
+    margin:3.2rem auto;
+
+    transition: all 1s .3s ease-in-out;
+    
+    
+    opacity:0;
+    animation-name: logo-pop-fade;
+    animation-duration:var(--animation-intro);
+    animation-delay:var(--animation-basedelay);
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+}
+header div .animate:hover{
+    
+    transform: scale(1.2);
+    opacity: 1;
+
+}
+header div .animate:hover+.baseLogo{
+    transform: scale(1.1);
+    opacity:0;
+}
+
+main{
+    
+    width:100%;
+    max-width: 38.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding:1.4rem 3.2rem 6rem;
+}
+main p{
+    font-family:var(--ff-p);
+    font-size:var(--fs-p);
+    color: var(--fc-p);
+    font-style: normal;
+    font-weight: 400;   
+    line-height: 1.5rem;
+    
+    width: 100%;
+    max-width: 30.5rem;;
+    
+    margin:0 auto 6.3rem;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    animation-name: NS;
+    animation-duration:1s;
+    animation-delay:calc(var(--animation-secdelay));
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+}
+main div{
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+main .card img{
+    position: relative;
+    
+    border-radius:20px;
+    width: 100%;
+    height: auto;
+
+    box-shadow: .3rem .3rem .5rem 0 var(--bg-color1);
+
+    margin-bottom: 3.2rem;
+
+    transition:all 1s .3s ease-in-out;
+
+    animation-name: SW-NE;
+    animation-duration:1s;
+    animation-delay:var(--animation-secdelay);
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+
+}
+main .card img:hover{
+    transform: scale(1.05);
+    opacity: 0.8;
+    
+    box-shadow: 1rem 1rem 1.5rem .5rem var(--bg-color1);
+    
+}
+
+main .card h2{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+    position:absolute;
+    top:1.6rem;
+    right:1.6rem;
+
+    text-transform: uppercase;
+    font-family: var(--ff-h1);
+    font-style: normal;
+    font-weight: 400;
+    color:var(--fc-h2);
+
+    width: 11.2rem;
+    height: 3.5rem;
+
+    background: #FEEAFA;
+    border-radius: 2rem;
+
+    transition:all 1s .3s ease-in-out;
+
+    animation-name: NE-SW;
+    animation-duration:1s;
+    animation-delay:var(--animation-secdelay);
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+}
+main .card img:hover+h2{
+    transform: scale(1.2);
+    
+}
+
+
+
+@keyframes NE-SW{
+    0%{
+        opacity: 0;
+        transform: translate(var(--card-translate), calc(var(--card-translate)*-1));
+        
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+        
+    }
+
+}
+@keyframes SW-NE{
+    0%{
+        opacity: 0;
+        transform: translate(calc(var(--card-translate)*-1), var(--card-translate));
+        
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+        
+    }
+
+}
+@keyframes NS{
+    0%{
+        opacity:0;
+        color: rgba(0, 0, 0, 0);
+        transform: translateY(calc(var(--card-translate)*-1));
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    
+    }
+}
+
+@keyframes logo-pop{
+    0%{
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    40%{
+        opacity:0;
+        transform: scale(1.5)
+
+    }
+
+    70%{
+        opacity: 0;
+        transform: scale(1.5)
+    }
+
+    90%{
+        opacity:1;
+    }
+
+    100%{}
+}
+@keyframes logo-pop-fade{
+    0%{
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    40%{
+        opacity:1;
+        transform: scale(1.5)
+
+    }
+    70%{
+        opacity:1;
+        transform: scale(1.5)
+
+    }
+
+    100%{
+        
+    }
+}
+
+
+
+
