@@ -1,0 +1,262 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px; 
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+:root{
+    font-size: 62.5%;;
+}
+
+body{
+    font-family: 'roboto',sans-serif;
+    background-color: #000000;
+    padding: 0 16rem;
+    padding-bottom:10rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    margin-top: 11.5rem;
+    margin-bottom: 8.7rem;
+    min-width: 112rem;
+
+}
+
+
+header .search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:.8rem;
+}
+header .search input{
+    width: 46.2rem;
+    height: 4.8rem;
+
+    font-family: 'roboto',sans-serif;
+    
+    color: #E1E1E6 ;
+
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+
+    background-color:#06181C;
+    border:none;
+    border-radius: .5rem;
+}
+header .search input::placeholder{
+    color: #7C7C8A;
+}
+header .search input:focus{
+    outline: 1px solid #065E7C;
+}
+
+header .search button{
+    width: 17rem;
+    height: 4.8rem;
+
+    font-family: 'roboto',sans-serif;
+    color:#FFFFFF;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 3.2rem;
+    gap: .8rem;
+
+    background-color:#065E7C;
+    border:none;
+    border-radius: .5rem;
+}
+header .search button:hover{
+    background-color: #FFFFFF;
+    color:#065E7C;
+    cursor: pointer;
+}
+header .search button:hover svg path{
+    fill:#065E7C;
+}
+
+main{
+    width: 100%;
+    border: 1px solid #4A808C;
+    border-radius: 1.2rem;
+    min-width: 112rem;
+
+  
+
+}
+
+table{
+    width: 100%;
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 160%;
+    color: #E1E1E6;
+    border-collapse: collapse;
+  
+}
+
+table tr{
+    height: 10.4rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    
+}
+table tr:nth-child(odd) td{
+    background: rgba(6, 22, 27, 0.5);
+    border-top: 1px solid #4A808C;
+
+}
+table tr:nth-child(even) td{
+    background: #06181C;
+    border-top: 1px solid #4A808C;
+
+}
+
+thead {   
+    color: #E1E1E6; 
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 160%;
+
+    height: 6.4rem;
+    text-align: left;
+    
+    
+}
+thead th{
+    background: #092D38;
+    width: 100%;
+    height: 100%;
+    padding: 2.4rem 2.4rem 2.4rem 4.0rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+thead th:first-child{
+    border-radius: 1.2rem 0 0 0;
+    min-width: 50rem;
+
+}
+thead th:last-child{
+    border-radius: 0 1.2rem 0 0 ;
+}
+
+tbody tr td{
+    padding: 2.4rem 2.4rem 2.4rem 4.0rem;
+    text-align: left;
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+   
+}
+tbody tr td.user{
+    display: flex;
+    flex-direction: row;
+    gap:1.6rem;
+    align-items: center;
+    justify-content: left;
+    min-width: 50rem;
+}
+tbody tr td img{
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+tbody tr td button{
+    background-color: transparent;
+    border: none;
+    color: #F75A68;
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 160%;
+    text-align: left;
+}
+tbody tr td button:hover{
+    cursor: pointer;
+}
+tbody tr td a{
+    text-decoration: none;
+    color: #E1E1E6; 
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 160%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+   
+
+
+}
+tbody tr td a span{
+    font-weight: 400;
+}
+
+
+tbody tr:last-child td:first-child{
+    border-radius: 0 0 0 1.2rem;
+}
+tbody tr:last-child td:last-child{
+    border-radius: 0 0 1.2rem 0;
+}
+
+tr.noUser td img{
+    width: 13.2rem;
+    height: 12.5rem;
+    border-radius: 0;
+
+}
+tr.noUser {
+    width: 100%;
+    height: 75rem;
+   
+    
+}
+tr.noUser td{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:6rem;
+
+    font-weight: 700;
+    font-size: 4.0rem;
+    line-height: 4rem;
+    color: #4E5455;
+}
